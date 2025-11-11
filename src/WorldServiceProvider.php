@@ -31,7 +31,7 @@ class WorldServiceProvider extends BaseBootableServiceProvider
     public function migrations(): ?string
     {
         if (PackageConfig::shouldRunMigrations()) {
-            return dirname(__DIR__) . '/migrations/';
+            return dirname(__DIR__) . '/database/migrations/';
         }
 
         return null;

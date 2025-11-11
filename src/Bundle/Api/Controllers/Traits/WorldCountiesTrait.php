@@ -4,8 +4,8 @@ namespace ByTIC\World\Bundle\Api\Controllers\Traits;
 
 trait WorldCountiesTrait
 {
-    public function forCountry()
+    public function for()
     {
-
+        $countryCode = $this->getRequest()->getParam('country');
     }
 }

@@ -15,7 +15,6 @@ class States extends RecordManager
     use StatesTrait;
     use CommonRecordsTrait;
 
-    public const TABLE = 'world-States';
-    public const CONTROLLER = 'world-States';
-
+    public const TABLE = 'world-states';
+    public const CONTROLLER = 'world-states';
 }
