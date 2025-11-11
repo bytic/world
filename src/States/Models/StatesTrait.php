@@ -10,6 +10,16 @@ trait StatesTrait
 {
     use TimestampableManagerTrait;
 
+    /**
+     * @param array $params
+     */
+    protected function injectParams(&$params = [])
+    {
+        parent::injectParams($params);
+
+        $params['order'][] = ['name', 'asc'];
+    }
+
     protected function generateTable(): string
     {
         return PackageConfig::tableName(WorldModels::WORLD_STATES, States::TABLE);
