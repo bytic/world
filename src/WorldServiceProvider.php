@@ -36,6 +36,10 @@ class WorldServiceProvider extends BaseBootableServiceProvider
 
         return null;
     }
+    protected function translationsPath(): ?string
+    {
+        return dirname(__DIR__) . '/resources/lang';
+    }
 
 //    protected function registerCommands()
 //    {
