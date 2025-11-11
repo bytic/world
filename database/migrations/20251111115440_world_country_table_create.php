@@ -6,7 +6,7 @@ use ByTIC\World\Utility\PackageConfig;
 use ByTIC\World\Utility\WorldModels;
 use Phinx\Migration\AbstractMigration;
 
-final class WorldCountryTableRename extends AbstractMigration
+final class WorldCountryTableCreate extends AbstractMigration
 {
     /**
      * Change Method.
