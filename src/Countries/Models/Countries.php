@@ -13,7 +13,6 @@ use Nip\Records\RecordManager;
 class Countries extends RecordManager
 {
     use CountriesTrait;
-    use CommonRecordsTrait;
 
     public const TABLE = 'world-countries';
     public const CONTROLLER = 'world-countries';

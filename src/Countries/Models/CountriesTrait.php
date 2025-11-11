@@ -2,15 +2,17 @@
 
 namespace  ByTIC\World\Countries\Models;
 
-use ByTIC\World\Base\Models\Behaviours\HasSaleable\RepositoryHasSaleable;
+use ByTIC\World\Base\Models\Traits\CommonRecordsTrait;
+use ByTIC\World\Base\Models\Traits\HasDatabaseConnectionTrait;
 use ByTIC\World\Utility\PackageConfig;
 use ByTIC\World\Utility\WorldModels;
 use ByTIC\World\Base\Models\Behaviours\Timestampable\TimestampableManagerTrait;
-use KM42\Common\Events\Actions\Filters\EventsInjectParamsAction;
 
 trait CountriesTrait
 {
+    use CommonRecordsTrait;
     use TimestampableManagerTrait;
+    use HasDatabaseConnectionTrait;
 
     /**
      * @param array $params
