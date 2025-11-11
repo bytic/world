@@ -2,7 +2,7 @@
 
 namespace ByTIC\World;
 
-use ByTIC\Audit\Utility\PackageConfig;
+use ByTIC\World\Utility\PackageConfig;
 use ByTIC\PackageBase\BaseBootableServiceProvider;
 
 /**
