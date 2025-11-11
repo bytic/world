@@ -1,0 +1,48 @@
+{
+  "name": "bytic/world",
+  "type": "library",
+  "license": "MIT",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/bytic/world",
+  "authors": [
+    {
+      "name": "Gabriel Solomon",
+      "email": "hello@gabrielsolomon.ro"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ByTIC\\World\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ByTIC\\World\\Tests\\": "tests/src",
+      "ByTIC\\World\\Tests\\Fixtures\\": "tests/fixtures"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "bytic/package-base": "^1.0|^2.0",
+    "bytic/orm": "^0.9|^1.0|^2.0",
+    "bytic/orm-filters": "^0.9|^1.0|^2.0",
+    "bytic/orm-behaviors": "^0.9|^1.0|^2.0",
+    "bytic/translation": "^0.9|^1.0|^2.0"
+  },
+  "require-dev": {
+    "bytic/phpqatools": "^1.0",
+    "mockery/mockery": "^1.0",
+    "bytic/migrations": "~0.13"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true,
+      "ergebnis/composer-normalize": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "bytic/phpqatools": true
+    }
+  }
+}
