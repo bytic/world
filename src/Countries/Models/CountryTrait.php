@@ -12,6 +12,11 @@ use Nip\Records\Record;
 trait CountryTrait
 {
 
+    public function getName()
+    {
+        return $this->getPropertyRaw('name');
+    }
+
     /**
      * @return string
      */
