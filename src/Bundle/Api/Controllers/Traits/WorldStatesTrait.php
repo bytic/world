@@ -14,12 +14,13 @@ trait WorldStatesTrait
         $countryCode = $this->getRequest()->get('country');
         $states = FindStatesByCountryCode::for($countryCode)->fetch();
 
-        $response = $states->transform(function ($item) {
-            $data = $item->toArray();
+        $response = [];
+        foreach ($states as $state) {
+            $data = $state->toArray();
             unset($data['created_at']);
             unset($data['updated_at']);
-            return $item->toArray();
-        });
+            $response[] = $data;
+        }
 
         $this->setResponseValues($response);
     }
