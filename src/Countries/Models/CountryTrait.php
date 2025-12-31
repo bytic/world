@@ -2,7 +2,6 @@
 
 namespace  ByTIC\World\Countries\Models;
 
-use Nip\Records\Record;
 
 /**
  * @property string $name
@@ -11,7 +10,6 @@ use Nip\Records\Record;
  */
 trait CountryTrait
 {
-
     public function getName()
     {
         return $this->getPropertyRaw('name');
@@ -33,5 +31,15 @@ trait CountryTrait
         return '<img src="'. $this->getFlagUrl().'"
                          alt="'. $this->name.'"
                          title="'. $this->name.'" style="vertical-align:middle;"/>';
+    }
+
+    public function getCode2(): ?string
+    {
+        return $this->getPropertyRaw('code2');
+    }
+
+    public function getCode3(): ?string
+    {
+        return $this->getPropertyRaw('code3');
     }
 }
