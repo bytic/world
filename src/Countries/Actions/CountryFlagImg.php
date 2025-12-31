@@ -21,7 +21,7 @@ class CountryFlagImg extends Action
         $country = $this->getSubject();
         $return = '<img src="' . $this->url(self::SIZE_XS) . '"
   srcset="' . $this->url(self::SIZE_M) . ' 2x, ' . $this->url(self::SIZE_M) . ' 3x"
-  height="20"  alt="' . $country->getName() . '">';
+  style="height:1em"  alt="' . $country->getName() . '">';
         return $return;
     }
 

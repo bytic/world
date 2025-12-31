@@ -15,9 +15,9 @@ class CountryBadge extends Action
     public function compact()
     {
         $country = $this->getSubject();
-        $return = '<div class="country-badge" title="' . $country->name . '">';
-        $return .= '<img src="' . $country->getFlagUrl() . '" alt="' . $country->name . '" class="country-flag" />';
-        $return .= '<span class="country-name">' . $country->getCode3() . '</span>';
+        $return = '<div class="country-badge badge text-bg-light" title="' . $country->name . '">';
+        $return .= CountryFlagImg::for($country)->html();
+        $return .= '<span class="country-name ms-3">' . $country->getCode3() . '</span>';
         $return .= '</div>';
         return $return;
     }
