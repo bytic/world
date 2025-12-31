@@ -3,6 +3,8 @@
 namespace  ByTIC\World\Countries\Models;
 
 
+use ByTIC\World\Countries\Actions\CountryFlagImg;
+
 /**
  * @property string $name
  * @property string $code2
@@ -20,7 +22,7 @@ trait CountryTrait
      */
     public function getFlagUrl(): string
     {
-        return 'https://www.countryflags.io/' . strtolower($this->code2) . '/flat/32.png';
+        return CountryFlagImg::for($this)->url();
     }
 
     /**
@@ -28,9 +30,7 @@ trait CountryTrait
      */
     public function getFlagImage(): string
     {
-        return '<img src="'. $this->getFlagUrl().'"
-                         alt="'. $this->name.'"
-                         title="'. $this->name.'" style="vertical-align:middle;"/>';
+        return CountryFlagImg::for($this)->html();
     }
 
     public function getCode2(): ?string
