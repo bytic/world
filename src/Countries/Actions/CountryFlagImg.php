@@ -27,7 +27,7 @@ class CountryFlagImg extends Action
 
     public function url($size = self::SIZE_XS): string
     {
-        return 'https://flagcdn.com/h' . $size . '/' . $this->getSubject()->code2 . '.png';
+        return 'https://flagcdn.com/h' . $size . '/' . strtolower($this->getSubject()->code2) . '.png';
     }
 }
 
