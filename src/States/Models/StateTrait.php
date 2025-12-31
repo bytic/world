@@ -11,4 +11,13 @@ namespace  ByTIC\World\States\Models;
  */
 trait StateTrait
 {
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getNameNative()
+    {
+        return $this->native;
+    }
 }
