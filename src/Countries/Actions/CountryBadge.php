@@ -17,7 +17,7 @@ class CountryBadge extends Action
         $country = $this->getSubject();
         $return = '<div class="country-badge badge text-bg-light" title="' . $country->name . '">';
         $return .= CountryFlagImg::for($country)->html();
-        $return .= '<span class="country-name ms-3">' . $country->getCode3() . '</span>';
+        $return .= '<span class="country-name ms-1">' . $country->getCode3() . '</span>';
         $return .= '</div>';
         return $return;
     }
